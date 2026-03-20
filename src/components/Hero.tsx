@@ -144,14 +144,14 @@ export default function Hero() {
           <div className="flex-1 min-w-0">
             <div className="overflow-hidden mb-2">
               <h1
-                className={`font-syne font-extrabold leading-none text-[clamp(4rem,12vw,9.5rem)] text-white transition-all duration-1000 delay-100 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-full"}`}
+                className={`font-syne font-extrabold leading-none text-[clamp(3rem,9vw,8rem)] text-white transition-all duration-1000 delay-100 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-full"}`}
               >
                 VANSH
               </h1>
             </div>
             <div className="overflow-hidden">
               <h1
-                className={`font-syne font-extrabold leading-none text-[clamp(4rem,12vw,9.5rem)] text-lime-gradient transition-all duration-1000 delay-200 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-full"}`}
+                className={`font-syne font-extrabold leading-none text-[clamp(3rem,9vw,8rem)] text-lime-gradient transition-all duration-1000 delay-200 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-full"}`}
               >
                 SHARMA
               </h1>

@@ -140,18 +140,18 @@ export default function Hero() {
         </div>
 
         {/* Giant name + Photo */}
-        <div className="flex items-end gap-6 md:gap-10 mb-8">
-          <div className="flex-1 min-w-0">
+        <div className="flex flex-col md:flex-row md:items-end gap-8 md:gap-10 mb-8">
+          <div className="flex-1 min-w-0 order-2 md:order-1">
             <div className="overflow-hidden mb-2">
               <h1
-                className={`font-syne font-extrabold leading-none text-[clamp(3rem,9vw,8rem)] text-white transition-all duration-1000 delay-100 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-full"}`}
+                className={`font-syne font-extrabold leading-none text-[clamp(2.5rem,9vw,8rem)] text-white transition-all duration-1000 delay-100 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-full"}`}
               >
                 VANSH
               </h1>
             </div>
             <div className="overflow-hidden">
               <h1
-                className={`font-syne font-extrabold leading-none text-[clamp(3rem,9vw,8rem)] text-lime-gradient transition-all duration-1000 delay-200 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-full"}`}
+                className={`font-syne font-extrabold leading-none text-[clamp(2.5rem,9vw,8rem)] text-lime-gradient transition-all duration-1000 delay-200 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-full"}`}
               >
                 SHARMA
               </h1>
@@ -160,13 +160,13 @@ export default function Hero() {
 
           {/* Profile Photo */}
           <div
-            className={`hidden md:block flex-shrink-0 group transition-all duration-1000 delay-300 ${mounted ? "opacity-100 translate-y-0 scale-100" : "opacity-0 translate-y-8 scale-95"}`}
+            className={`flex-shrink-0 group transition-all duration-1000 delay-300 order-1 md:order-2 ${mounted ? "opacity-100 translate-y-0 scale-100" : "opacity-0 translate-y-8 scale-95"}`}
           >
-            <div className="relative overflow-hidden border border-white/10 group-hover:border-[#CCFF00]/30 transition-all duration-500">
+            <div className="relative w-28 h-28 md:w-40 md:h-40 lg:w-52 lg:h-52 overflow-hidden border border-white/10 group-hover:border-[#CCFF00]/30 transition-all duration-500">
               <img
                 src="/vansh-photo.jpg"
                 alt="Vansh Sharma"
-                className="w-40 h-40 lg:w-52 lg:h-52 object-cover profile-photo"
+                className="w-full h-full object-cover profile-photo"
               />
               <div className="absolute inset-0 bg-[#CCFF00]/0 group-hover:bg-[#CCFF00]/5 transition-all duration-500 pointer-events-none" />
             </div>

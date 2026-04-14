@@ -2,24 +2,21 @@
 import { useEffect, useRef } from "react";
 
 const skills = [
-  { name: "Next.js", pct: 82, cat: "Frontend" },
-  { name: "React", pct: 87, cat: "Frontend" },
-  { name: "JavaScript", pct: 90, cat: "Frontend" },
-  { name: "TypeScript", pct: 72, cat: "Frontend" },
-  { name: "HTML & CSS", pct: 95, cat: "Frontend" },
-  { name: "Tailwind CSS", pct: 90, cat: "Frontend" },
-  { name: "Python", pct: 78, cat: "ML" },
-  { name: "Scikit-learn", pct: 68, cat: "ML" },
-  { name: "Regression", pct: 75, cat: "ML" },
-  { name: "NumPy/Pandas", pct: 72, cat: "ML" },
-  { name: "Node.js", pct: 85, cat: "Backend" },
-  { name: "Golang", pct: 30, cat: "Backend" },
-  { name: "DSA / LeetCode", pct: 80, cat: "CS" },
-  { name: "Git & GitHub", pct: 88, cat: "CS" },
+  { name: "Next.js", pct: 82, cat: "Frontend", slug: "nextdotjs" },
+  { name: "React", pct: 87, cat: "Frontend", slug: "react" },
+  { name: "JavaScript", pct: 90, cat: "Frontend", slug: "javascript" },
+  { name: "TypeScript", pct: 72, cat: "Frontend", slug: "typescript" },
+  { name: "Tailwind CSS", pct: 90, cat: "Frontend", slug: "tailwindcss" },
+  { name: "LangChain", pct: 75, cat: "ML", slug: "langchain" },
+  { name: "Python", pct: 78, cat: "ML", slug: "python" },
+  { name: "Scikit-learn", pct: 68, cat: "ML", slug: "scikitlearn" },
+  { name: "Node.js", pct: 85, cat: "Backend", slug: "nodedotjs" },
+  { name: "Git & GitHub", pct: 88, cat: "CS", slug: "github" },
+  { name: "DSA / LeetCode", pct: 80, cat: "CS", slug: "leetcode" },
 ];
 
-const row1 = ["React", "Next.js", "TypeScript", "Tailwind CSS", "Python", "Scikit-learn", "HTML5", "CSS3", "Git", "Vercel"];
-const row2 = ["JavaScript", "REST API", "NumPy", "Pandas", "DSA", "Regression", "Node.js", "GitHub", "LeetCode", "ML"];
+const row1 = ["React", "Next.js", "TypeScript", "Tailwind CSS", "Python", "Scikit-learn", "HTML5", "CSS3", "Git", "Vercel", "LangChain"];
+const row2 = ["JavaScript", "REST API", "NumPy", "Pandas", "DSA", "Node.js", "GitHub", "LeetCode", "ML", "LangChain"];
 
 export default function Skills() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -96,6 +93,13 @@ export default function Skills() {
             >
               <div className="flex items-center justify-between mb-3">
                 <div className="flex items-center gap-3">
+                  {skill.slug && (
+                    <img
+                      src={`https://cdn.simpleicons.org/${skill.slug}/CCFF00`}
+                      alt={skill.name}
+                      className="w-5 h-5 object-contain"
+                    />
+                  )}
                   <span className="font-jakarta font-medium text-white text-sm">{skill.name}</span>
                   <span className={`font-mono text-[9px] px-2 py-0.5 border tracking-widest uppercase ${catColor(skill.cat)}`}>
                     {skill.cat}
